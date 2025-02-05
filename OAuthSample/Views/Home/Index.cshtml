@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home";
+}
+
+<div style="margin-top: 60px">
+    @if (Request.IsAuthenticated)
+    {
+        <h2>Hello, @User.Identity.Name!</h2>
+        <form method="post" action="@Url.Action("SignOut", "Auth")">
+            <button type="submit" class="btn btn-danger">Sign out</button>
+        </form>
+    }
+    else
+    {
+        <form method="post" action="@Url.Action("SignIn", "Auth")">
+            <button type="submit" id="loginLink" class="btn btn-primary">Sign in</button>
+        </form>
+    }
+</div>
