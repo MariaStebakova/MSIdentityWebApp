@@ -9,6 +9,9 @@
         <form method="post" action="@Url.Action("SignOut", "Auth")">
             <button type="submit" class="btn btn-danger">Sign out</button>
         </form>
+        <form method="post" action="@Url.Action("Validate", "Home")">
+            <button style="margin-top: 10px;" type="submit" class="btn btn-primary">Validate token</button>
+        </form>
     }
     else
     {

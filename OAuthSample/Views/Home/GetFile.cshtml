@@ -1,0 +1,49 @@
+﻿
+@{
+    ViewBag.Title = "GetFile";
+}
+
+<div style="margin-top: 60px">
+    <h2>File Details</h2>
+
+    @if (ViewBag.Error != null)
+    {
+        <div class="alert alert-danger">
+            @ViewBag.Error
+        </div>
+    }
+    else if (Model != null)
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>File Type Name</strong></td>
+                    <td>@Model.FileTypeName</td>
+                </tr>
+                <tr>
+                    <td><strong>Description</strong></td>
+                    <td>@Model.Description</td>
+                </tr>
+                <tr>
+                    <td><strong>File Number</strong></td>
+                    <td>@Model.FileNumberPart1</td>
+                </tr>
+                <tr>
+                    <td><strong>Date Created</strong></td>
+                    <td>@Model.DateCreated.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No file data available.</p>
+    }
+</div>
+

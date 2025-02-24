@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "Validate";
+}
+
+<div style="margin-top: 60px">
+    <h2>Validation</h2>
+    <p style="word-wrap: break-word">@ViewBag.Message</p>
+
+    <form method="post" action="@Url.Action("GetFile", "Home")">
+        <button type="submit" class="btn btn-primary">Get File</button>
+    </form>
+</div>
+
